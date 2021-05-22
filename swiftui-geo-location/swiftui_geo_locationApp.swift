@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct swiftui_geo_locationApp: App {
+    @StateObject var viewModel = ViewModel(model: LocationModel())
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: viewModel)
         }
     }
 }

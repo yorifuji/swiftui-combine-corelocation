@@ -11,6 +11,8 @@
 		E31335422650FAB70089FE36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31335412650FAB70089FE36 /* ContentView.swift */; };
 		E31335442650FAB80089FE36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31335432650FAB80089FE36 /* Assets.xcassets */; };
 		E31335472650FAB80089FE36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31335462650FAB80089FE36 /* Preview Assets.xcassets */; };
+		E313356F2650FF350089FE36 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313356E2650FF350089FE36 /* LocationModel.swift */; };
+		E358B6512655FE79004A5D68 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B6502655FE79004A5D68 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		E31335432650FAB80089FE36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E31335462650FAB80089FE36 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E31335482650FAB80089FE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E313356E2650FF350089FE36 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		E358B6502655FE79004A5D68 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,10 @@
 		E313353E2650FAB70089FE36 /* swiftui-geo-location */ = {
 			isa = PBXGroup;
 			children = (
+				E3133572265103090089FE36 /* Model */,
+				E3133571265102FF0089FE36 /* ViewModel */,
+				E3133570265102F40089FE36 /* View */,
 				E313353F2650FAB70089FE36 /* swiftui_geo_locationApp.swift */,
-				E31335412650FAB70089FE36 /* ContentView.swift */,
 				E31335432650FAB80089FE36 /* Assets.xcassets */,
 				E31335482650FAB80089FE36 /* Info.plist */,
 				E31335452650FAB80089FE36 /* Preview Content */,
@@ -67,6 +73,30 @@
 				E31335462650FAB80089FE36 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E3133570265102F40089FE36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E31335412650FAB70089FE36 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E3133571265102FF0089FE36 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E358B6502655FE79004A5D68 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E3133572265103090089FE36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E313356E2650FF350089FE36 /* LocationModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +170,8 @@
 			files = (
 				E31335422650FAB70089FE36 /* ContentView.swift in Sources */,
 				E31335402650FAB70089FE36 /* swiftui_geo_locationApp.swift in Sources */,
+				E358B6512655FE79004A5D68 /* ViewModel.swift in Sources */,
+				E313356F2650FF350089FE36 /* LocationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
