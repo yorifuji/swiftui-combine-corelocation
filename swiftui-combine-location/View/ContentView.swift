@@ -11,7 +11,7 @@ import CoreLocation
 struct ContentView: View {
     @ObservedObject var viewModel: ViewModel
     var body: some View {
-        VStack {
+        VStack(spacing: 16) {
             HStack(spacing: 16) {
                 Button("request") {
                     viewModel.request()
@@ -23,14 +23,14 @@ struct ContentView: View {
                     viewModel.stop()
                 }
             }
-            Text(String(format: "lon: %f", viewModel.lon))
-            Text(String(format: "lat: %f", viewModel.lat))
+            Text(String(format: "longitude: %f", viewModel.longitude))
+            Text(String(format: "latitude: %f", viewModel.latitude))
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static let viewModel = ViewModel(model: LocationModel())
+    static let viewModel = ViewModel(model: LocationDataSource())
     static var previews: some View {
         ContentView(viewModel: viewModel)
     }

@@ -11,18 +11,18 @@
 		E31335422650FAB70089FE36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31335412650FAB70089FE36 /* ContentView.swift */; };
 		E31335442650FAB80089FE36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31335432650FAB80089FE36 /* Assets.xcassets */; };
 		E31335472650FAB80089FE36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31335462650FAB80089FE36 /* Preview Assets.xcassets */; };
-		E313356F2650FF350089FE36 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313356E2650FF350089FE36 /* LocationModel.swift */; };
+		E313356F2650FF350089FE36 /* LocationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313356E2650FF350089FE36 /* LocationDataSource.swift */; };
 		E358B6512655FE79004A5D68 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B6502655FE79004A5D68 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E313353C2650FAB70089FE36 /* swiftui-geo-location.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-geo-location.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E313353C2650FAB70089FE36 /* swiftui-combine-location.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-combine-location.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E313353F2650FAB70089FE36 /* swiftui_geo_locationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_geo_locationApp.swift; sourceTree = "<group>"; };
 		E31335412650FAB70089FE36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E31335432650FAB80089FE36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E31335462650FAB80089FE36 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E31335482650FAB80089FE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E313356E2650FF350089FE36 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		E313356E2650FF350089FE36 /* LocationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataSource.swift; sourceTree = "<group>"; };
 		E358B6502655FE79004A5D68 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,7 +40,7 @@
 		E31335332650FAB70089FE36 = {
 			isa = PBXGroup;
 			children = (
-				E313353E2650FAB70089FE36 /* swiftui-geo-location */,
+				E313353E2650FAB70089FE36 /* swiftui-combine-location */,
 				E313353D2650FAB70089FE36 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		E313353D2650FAB70089FE36 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E313353C2650FAB70089FE36 /* swiftui-geo-location.app */,
+				E313353C2650FAB70089FE36 /* swiftui-combine-location.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E313353E2650FAB70089FE36 /* swiftui-geo-location */ = {
+		E313353E2650FAB70089FE36 /* swiftui-combine-location */ = {
 			isa = PBXGroup;
 			children = (
 				E3133572265103090089FE36 /* Model */,
@@ -64,7 +64,7 @@
 				E31335482650FAB80089FE36 /* Info.plist */,
 				E31335452650FAB80089FE36 /* Preview Content */,
 			);
-			path = "swiftui-geo-location";
+			path = "swiftui-combine-location";
 			sourceTree = "<group>";
 		};
 		E31335452650FAB80089FE36 /* Preview Content */ = {
@@ -94,7 +94,7 @@
 		E3133572265103090089FE36 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E313356E2650FF350089FE36 /* LocationModel.swift */,
+				E313356E2650FF350089FE36 /* LocationDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,9 +102,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E313353B2650FAB70089FE36 /* swiftui-geo-location */ = {
+		E313353B2650FAB70089FE36 /* swiftui-combine-location */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E313354B2650FAB80089FE36 /* Build configuration list for PBXNativeTarget "swiftui-geo-location" */;
+			buildConfigurationList = E313354B2650FAB80089FE36 /* Build configuration list for PBXNativeTarget "swiftui-combine-location" */;
 			buildPhases = (
 				E31335382650FAB70089FE36 /* Sources */,
 				E31335392650FAB70089FE36 /* Frameworks */,
@@ -114,9 +114,9 @@
 			);
 			dependencies = (
 			);
-			name = "swiftui-geo-location";
+			name = "swiftui-combine-location";
 			productName = "swiftui-geo-location";
-			productReference = E313353C2650FAB70089FE36 /* swiftui-geo-location.app */;
+			productReference = E313353C2650FAB70089FE36 /* swiftui-combine-location.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -133,7 +133,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E31335372650FAB70089FE36 /* Build configuration list for PBXProject "swiftui-geo-location" */;
+			buildConfigurationList = E31335372650FAB70089FE36 /* Build configuration list for PBXProject "swiftui-combine-location" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -146,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E313353B2650FAB70089FE36 /* swiftui-geo-location */,
+				E313353B2650FAB70089FE36 /* swiftui-combine-location */,
 			);
 		};
 /* End PBXProject section */
@@ -171,7 +171,7 @@
 				E31335422650FAB70089FE36 /* ContentView.swift in Sources */,
 				E31335402650FAB70089FE36 /* swiftui_geo_locationApp.swift in Sources */,
 				E358B6512655FE79004A5D68 /* ViewModel.swift in Sources */,
-				E313356F2650FF350089FE36 /* LocationModel.swift in Sources */,
+				E313356F2650FF350089FE36 /* LocationDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +341,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E31335372650FAB70089FE36 /* Build configuration list for PBXProject "swiftui-geo-location" */ = {
+		E31335372650FAB70089FE36 /* Build configuration list for PBXProject "swiftui-combine-location" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E31335492650FAB80089FE36 /* Debug */,
@@ -350,7 +350,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E313354B2650FAB80089FE36 /* Build configuration list for PBXNativeTarget "swiftui-geo-location" */ = {
+		E313354B2650FAB80089FE36 /* Build configuration list for PBXNativeTarget "swiftui-combine-location" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E313354C2650FAB80089FE36 /* Debug */,

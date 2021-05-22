@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/yorifuji/git/swiftui-geo-location/swiftui-combine-location.xcodeproj">
    </FileRef>
 </Workspace>
