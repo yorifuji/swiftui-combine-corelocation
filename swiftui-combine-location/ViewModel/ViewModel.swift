@@ -31,17 +31,16 @@ final class ViewModel: NSObject, ObservableObject {
     }
 
     func activate() {
-        model.authorizationPublisher().print("dump:status").sink { [weak self] authorizationStatus in
-            guard let self = self else { return }
-            self.authorizationStatus = authorizationStatus
-        }.store(in: &cancellables)
+        model.authorizationPublisher()
+            .print("dump:status")
+            .sink { [weak self] authorizationStatus in self?.authorizationStatus = authorizationStatus }
+            .store(in: &cancellables)
 
-        model.locationPublisher().print("dump:location").sink { [weak self] locations in
-            guard let self = self else { return }
-            if let last = locations.last {
-                self.location = last
-            }
-        }.store(in: &cancellables)
+        model.locationPublisher()
+            .print("dump:location")
+            .compactMap { $0.last }
+            .sink { [weak self] location in self?.location = location }
+            .store(in: &cancellables)
     }
 
     func deactivate() {
