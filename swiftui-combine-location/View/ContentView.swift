@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CoreLocation
 
 struct ContentView: View {
     @ObservedObject var viewModel: ViewModel
