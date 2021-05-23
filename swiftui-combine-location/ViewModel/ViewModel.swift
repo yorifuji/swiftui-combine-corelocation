@@ -12,14 +12,14 @@ final class ViewModel: NSObject, ObservableObject {
     let model: LocationDataSource
     var cancellables = Set<AnyCancellable>()
     @Published var authorizationStatus = CLAuthorizationStatus.notDetermined
-    @Published var lastLocation: CLLocation = .init()
+    @Published var location: CLLocation = .init()
 
     var latitude: CLLocationDegrees {
-        lastLocation.coordinate.latitude
+        location.coordinate.latitude
     }
 
     var longitude: CLLocationDegrees {
-        lastLocation.coordinate.longitude
+        location.coordinate.longitude
     }
 
     init(model: LocationDataSource) {
@@ -39,7 +39,7 @@ final class ViewModel: NSObject, ObservableObject {
         model.locationPublisher().print("dump:location").sink { [weak self] locations in
             guard let self = self else { return }
             if let last = locations.last {
-                self.lastLocation = last
+                self.location = last
             }
         }.store(in: &cancellables)
     }
