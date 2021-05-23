@@ -20,7 +20,7 @@ final class LocationDataSource: NSObject {
     }
 
     func authorizationPublisher() -> AnyPublisher<CLAuthorizationStatus, Never> {
-        return Just(CLLocationManager().authorizationStatus).merge(with: authorizationSubject).eraseToAnyPublisher()
+        return Just(locationManager.authorizationStatus).merge(with: authorizationSubject).eraseToAnyPublisher()
     }
 
     func locationPublisher() -> AnyPublisher<[CLLocation], Never> {
