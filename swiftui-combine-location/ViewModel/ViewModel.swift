@@ -30,14 +30,8 @@ final class ViewModel: NSObject, ObservableObject {
     }
 
     func activate() {
-        model.authorizationPublisher()
-            .print("dump:status")
-            .assign(to: &$authorizationStatus)
-
-        model.locationPublisher()
-            .print("dump:location")
-            .compactMap { $0.last }
-            .assign(to: &$location)
+        model.authorizationPublisher().assign(to: &$authorizationStatus)
+        model.locationPublisher().compactMap { $0.last }.assign(to: &$location)
     }
 
     func deactivate() {
