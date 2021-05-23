@@ -10,7 +10,6 @@ import Combine
 
 final class ViewModel: NSObject, ObservableObject {
     let model: LocationDataSource
-    var cancellables = Set<AnyCancellable>()
     @Published var authorizationStatus = CLAuthorizationStatus.notDetermined
     @Published var location: CLLocation = .init()
 
@@ -33,18 +32,15 @@ final class ViewModel: NSObject, ObservableObject {
     func activate() {
         model.authorizationPublisher()
             .print("dump:status")
-            .sink { [weak self] authorizationStatus in self?.authorizationStatus = authorizationStatus }
-            .store(in: &cancellables)
+            .assign(to: &$authorizationStatus)
 
         model.locationPublisher()
             .print("dump:location")
             .compactMap { $0.last }
-            .sink { [weak self] location in self?.location = location }
-            .store(in: &cancellables)
+            .assign(to: &$location)
     }
 
     func deactivate() {
-        cancellables.removeAll()
     }
 
     func startTracking() {
