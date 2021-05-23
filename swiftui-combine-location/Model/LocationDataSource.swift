@@ -39,7 +39,6 @@ final class LocationDataSource: NSObject {
 
     func stopTracking() {
         locationManager.stopUpdatingLocation()
-//        subject.send(completion: .finished)
     }
 }
 
