@@ -10,7 +10,7 @@ import Combine
 
 final class LocationDataSource: NSObject {
 
-    private var locationManager: CLLocationManager = .init()
+    private let locationManager: CLLocationManager = .init()
     private let authorizationSubject: PassthroughSubject<CLAuthorizationStatus, Never> = .init()
     private let locationSubject: PassthroughSubject<[CLLocation], Never> = .init()
 
